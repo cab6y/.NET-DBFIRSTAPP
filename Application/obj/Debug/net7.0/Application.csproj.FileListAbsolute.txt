@@ -1,0 +1,12 @@
+C:\VisualProjects\DBFIRSTAPP\DBFirstApp\Application\bin\Debug\net7.0\Application.deps.json
+C:\VisualProjects\DBFIRSTAPP\DBFirstApp\Application\bin\Debug\net7.0\Application.dll
+C:\VisualProjects\DBFIRSTAPP\DBFirstApp\Application\bin\Debug\net7.0\Application.pdb
+C:\VisualProjects\DBFIRSTAPP\DBFirstApp\Application\obj\Debug\net7.0\Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\VisualProjects\DBFIRSTAPP\DBFirstApp\Application\obj\Debug\net7.0\Application.AssemblyInfoInputs.cache
+C:\VisualProjects\DBFIRSTAPP\DBFirstApp\Application\obj\Debug\net7.0\Application.AssemblyInfo.cs
+C:\VisualProjects\DBFIRSTAPP\DBFirstApp\Application\obj\Debug\net7.0\Application.csproj.CoreCompileInputs.cache
+C:\VisualProjects\DBFIRSTAPP\DBFirstApp\Application\obj\Debug\net7.0\Application.sourcelink.json
+C:\VisualProjects\DBFIRSTAPP\DBFirstApp\Application\obj\Debug\net7.0\Application.dll
+C:\VisualProjects\DBFIRSTAPP\DBFirstApp\Application\obj\Debug\net7.0\refint\Application.dll
+C:\VisualProjects\DBFIRSTAPP\DBFirstApp\Application\obj\Debug\net7.0\Application.pdb
+C:\VisualProjects\DBFIRSTAPP\DBFirstApp\Application\obj\Debug\net7.0\ref\Application.dll
