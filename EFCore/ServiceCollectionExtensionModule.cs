@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Domain.Entities.Test;
+using EFCore.Test;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -9,10 +11,12 @@ using System.Threading.Tasks;
 
 namespace EFCore
 {
-    public static class ServiceCollectionExtensions
+    public static class ServiceCollectionExtensionModule
     {
         public static IServiceCollection AddEfCoreModule(this IServiceCollection services, IConfiguration configuration)
         {
+            services.AddScoped<ITestRepository, EFCoreTestRepository>();
+
             // Connection string okuma
             var connectionString = configuration.GetConnectionString("Default");
 

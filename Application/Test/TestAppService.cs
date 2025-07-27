@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Domain.Entities.Test;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,24 +8,17 @@ namespace Application.Test
 {
     public class TestAppService : ITestAppService
     {
-        private readonly AppDbContext _dbcontext;
-        public TestAppService(AppDbContext dbcontext)
+        private readonly ITestRepository _rep;
+        public TestAppService(ITestRepository rep)
         {
-            _dbcontext = dbcontext;
+            _rep = rep;
         }
 
         public async Task<bool> CreateAsync(string name)
         {
             try
             {
-                var test = new Domain.Test.Test
-                {
-                    Id = Guid.NewGuid(),
-                    Name = name,
-                    CreationTime = DateTime.Now
-                };
-                await _dbcontext.Tests.AddAsync(test);
-                await _dbcontext.SaveChangesAsync();
+                await _rep.CreateAsync(name);
                 return true;
             }
             catch(Exception ex)
