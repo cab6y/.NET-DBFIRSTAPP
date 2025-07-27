@@ -12,20 +12,7 @@ public class AppDbContext : DbContext
 
     public DbSet<Test> Tests { get; set; }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-        if (!optionsBuilder.IsConfigured)
-        {
-            // EFCore projesi altındaki appsettings.json'u oku
-            var config = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory()) // EFCore projesinin working directory'si
-                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-                .Build();
 
-            var connectionString = config.GetConnectionString("Default");
-            optionsBuilder.UseSqlServer(connectionString);
-        }
-    }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

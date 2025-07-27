@@ -208,15 +208,15 @@
             },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
-              "version": "[9.0.7, )"
+              "version": "[7.0.0, )"
             },
             "Microsoft.Extensions.Configuration.FileExtensions": {
               "target": "Package",
-              "version": "[9.0.7, )"
+              "version": "[7.0.0, )"
             },
             "Microsoft.Extensions.Configuration.Json": {
               "target": "Package",
-              "version": "[9.0.7, )"
+              "version": "[7.0.0, )"
             }
           },
           "imports": [
@@ -269,6 +269,9 @@
             "projectReferences": {
               "C:\\VisualProjects\\DBFIRSTAPP\\DBFirstApp\\Application\\Application.csproj": {
                 "projectPath": "C:\\VisualProjects\\DBFIRSTAPP\\DBFirstApp\\Application\\Application.csproj"
+              },
+              "C:\\VisualProjects\\DBFIRSTAPP\\DBFirstApp\\EFCore\\EFCore.csproj": {
+                "projectPath": "C:\\VisualProjects\\DBFIRSTAPP\\DBFirstApp\\EFCore\\EFCore.csproj"
               }
             }
           }

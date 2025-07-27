@@ -1,4 +1,5 @@
 using Application;
+using EFCore;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,6 +8,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddContractsModule();
+builder.Services.AddEfCoreModule(builder.Configuration);
 
 var app = builder.Build();
 
