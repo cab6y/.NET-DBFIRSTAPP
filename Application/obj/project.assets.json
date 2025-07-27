@@ -1155,16 +1155,6 @@
           }
         }
       },
-      "Application.Contracts/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
-        "compile": {
-          "bin/placeholder/Application.Contracts.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Application.Contracts.dll": {}
-        }
-      },
       "Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -3187,11 +3177,6 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Application.Contracts/1.0.0": {
-      "type": "project",
-      "path": "../Application.Contracts/Application.Contracts.csproj",
-      "msbuildProject": "../Application.Contracts/Application.Contracts.csproj"
-    },
     "Domain/1.0.0": {
       "type": "project",
       "path": "../Domain/Domain.csproj",
@@ -3205,7 +3190,6 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "Application.Contracts >= 1.0.0",
       "EFCore >= 1.0.0"
     ]
   },
@@ -3241,9 +3225,6 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\VisualProjects\\DBFIRSTAPP\\DBFirstApp\\Application.Contracts\\Application.Contracts.csproj": {
-              "projectPath": "C:\\VisualProjects\\DBFIRSTAPP\\DBFirstApp\\Application.Contracts\\Application.Contracts.csproj"
-            },
             "C:\\VisualProjects\\DBFIRSTAPP\\DBFirstApp\\EFCore\\EFCore.csproj": {
               "projectPath": "C:\\VisualProjects\\DBFIRSTAPP\\DBFirstApp\\EFCore\\EFCore.csproj"
             }

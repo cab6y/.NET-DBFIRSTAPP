@@ -1,0 +1,18 @@
+[
+  {
+    "ContainingType": "UI.Controllers.ServicesController.Test.TestController",
+    "Method": "CreateAsync",
+    "RelativePath": "api/Test/CreateAsync",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

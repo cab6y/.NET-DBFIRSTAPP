@@ -1,36 +1,41 @@
 ﻿using Domain.Test;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.Extensions.Configuration;
+using System.IO;
 
-namespace EFCore.DBContext
+public class AppDbContext : DbContext
 {
-    public class AppDbContext : DbContext
+    public AppDbContext(DbContextOptions<AppDbContext> options)
+        : base(options)
     {
-        public AppDbContext(DbContextOptions<AppDbContext> options)
-            : base(options)
+    }
+
+    public DbSet<Test> Tests { get; set; }
+
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+        if (!optionsBuilder.IsConfigured)
         {
+            // EFCore projesi altındaki appsettings.json'u oku
+            var config = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory()) // EFCore projesinin working directory'si
+                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+                .Build();
+
+            var connectionString = config.GetConnectionString("Default");
+            optionsBuilder.UseSqlServer(connectionString);
         }
+    }
 
-        // Domain.Entities altındaki tabloları burada DbSet olarak tanımla
-        //Add-Migration init -StartupProject View -Project EFCore
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        base.OnModelCreating(modelBuilder);
 
-        public DbSet<Test> Tests { get; set; }
-
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        modelBuilder.Entity<Test>(entity =>
         {
-            base.OnModelCreating(modelBuilder);
-
-            // Fluent API ile yapılandırma
-            modelBuilder.Entity<Test>(entity =>
-            {
-                entity.HasKey(e => e.Id);
-                entity.Property(e => e.Name).HasMaxLength(50);
-                entity.Property(e => e.CreationTime).HasColumnType("date");
-            });
-        }
+            entity.HasKey(e => e.Id);
+            entity.Property(e => e.Name).HasMaxLength(50);
+            entity.Property(e => e.CreationTime).HasColumnType("date");
+        });
     }
 }

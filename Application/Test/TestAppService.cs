@@ -1,15 +1,17 @@
-﻿using Application.Contracts.Test;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using EFCore.DBContext;
 namespace Application.Test
 {
     public class TestAppService : ITestAppService
     {
         private readonly AppDbContext _dbcontext;
+        public TestAppService(AppDbContext dbcontext)
+        {
+            _dbcontext = dbcontext;
+        }
 
         public async Task<bool> CreateAsync(string name)
         {
