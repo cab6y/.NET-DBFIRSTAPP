@@ -1,5 +1,7 @@
-﻿using Domain.Entities.TodoItem;
+﻿using Dapper;
+using Domain.Entities.TodoItem;
 using Microsoft.EntityFrameworkCore;
+using System.Data;
 namespace EFCore.TodoItem;
 public class EFCoreTodoItemRepository : ITodoItemRepository
 {
@@ -16,8 +18,17 @@ public class EFCoreTodoItemRepository : ITodoItemRepository
 
     public async Task<List<Domain.Entities.TodoItem.TodoItem>> GetAllAsync()
     {
-        return await _context.Set<Domain.Entities.TodoItem.TodoItem>().ToListAsync();
+        using var connection = _context.Database.GetDbConnection();
+        var result = await connection.QueryAsync<Domain.Entities.TodoItem.TodoItem>(
+            "sp_GetTodoItems",
+            commandType: CommandType.StoredProcedure);
+
+        return result.ToList();
     }
+
+
+
+
     public async Task<bool> UpdateAsync(Domain.Entities.TodoItem.TodoItem input)
     {
         var item = await GetAsync(input.Id);

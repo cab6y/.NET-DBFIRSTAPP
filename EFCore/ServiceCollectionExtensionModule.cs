@@ -1,4 +1,5 @@
 ﻿using Domain.Entities.TodoItem;
+using EFCore.DBContext;
 using EFCore.Interceptors;
 using EFCore.TodoItem;
 using Microsoft.EntityFrameworkCore;
@@ -22,6 +23,12 @@ namespace EFCore
             services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlServer(connectionString));
 
+            // --- Stored Procedure kontrolü ---
+            using (var scope = services.BuildServiceProvider().CreateScope())
+            {
+                var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+                StoredProcedureInitializer.EnsureStoredProceduresCreatedAsync(dbContext).GetAwaiter().GetResult();
+            }
             return services;
         }
     }
