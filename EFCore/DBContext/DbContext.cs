@@ -11,7 +11,7 @@ public class AppDbContext : DbContext
     {
     }
 
-    public DbSet<TodoItem> Tests { get; set; }
+    public DbSet<TodoItem> TodoItems { get; set; }
 
 
 
