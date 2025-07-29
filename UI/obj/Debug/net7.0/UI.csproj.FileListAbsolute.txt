@@ -84,3 +84,13 @@ C:\VisualProjects\DBFIRSTAPP\DBFirstApp\UI\obj\Debug\net7.0\refint\UI.dll
 C:\VisualProjects\DBFIRSTAPP\DBFirstApp\UI\obj\Debug\net7.0\UI.pdb
 C:\VisualProjects\DBFIRSTAPP\DBFirstApp\UI\obj\Debug\net7.0\UI.genruntimeconfig.cache
 C:\VisualProjects\DBFIRSTAPP\DBFirstApp\UI\obj\Debug\net7.0\ref\UI.dll
+C:\VisualProjects\DBFIRSTAPP\DBFirstApp\UI\bin\Debug\net7.0\AutoMapper.dll
+C:\VisualProjects\DBFIRSTAPP\DBFirstApp\UI\bin\Debug\net7.0\MediatR.dll
+C:\VisualProjects\DBFIRSTAPP\DBFirstApp\UI\bin\Debug\net7.0\MediatR.Contracts.dll
+C:\VisualProjects\DBFIRSTAPP\DBFirstApp\UI\bin\Debug\net7.0\Microsoft.Bcl.HashCode.dll
+C:\VisualProjects\DBFIRSTAPP\DBFirstApp\UI\bin\Debug\net7.0\Microsoft.Extensions.DependencyInjection.dll
+C:\VisualProjects\DBFIRSTAPP\DBFirstApp\UI\bin\Debug\net7.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\VisualProjects\DBFIRSTAPP\DBFirstApp\UI\bin\Debug\net7.0\Microsoft.Extensions.Logging.dll
+C:\VisualProjects\DBFIRSTAPP\DBFirstApp\UI\bin\Debug\net7.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\VisualProjects\DBFIRSTAPP\DBFirstApp\UI\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
+C:\VisualProjects\DBFIRSTAPP\DBFirstApp\UI\bin\Debug\net7.0\Microsoft.Extensions.Primitives.dll

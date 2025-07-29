@@ -1,10 +1,5 @@
-﻿using Application.Test;
+﻿using Application.TodoItems;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Application
 {
@@ -13,7 +8,7 @@ namespace Application
         public static IServiceCollection AddContractsModule(this IServiceCollection services)
         {
             // Application implementasyonlarını buradan kaydet
-            services.AddScoped<ITestAppService, TestAppService>();
+            services.AddScoped<ITodoItemAppService, TodoItemAppService>();
 
             // İleride yeni servis eklediğinde buraya ekleyebilirsin
             return services;

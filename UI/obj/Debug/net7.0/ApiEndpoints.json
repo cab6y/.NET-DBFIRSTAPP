@@ -1,16 +1,79 @@
 [
   {
-    "ContainingType": "UI.Controllers.ServicesController.Test.TestController",
-    "Method": "CreateAsync",
-    "RelativePath": "api/Test/CreateAsync",
+    "ContainingType": "UI.Controllers.ServicesController.TodoItems.TodoItemController",
+    "Method": "Add",
+    "RelativePath": "api/TodoItem/Add",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "name",
-        "Type": "System.String",
+        "Name": "input",
+        "Type": "Application.TodoItems.Dtos.CreateTodoItemDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UI.Controllers.ServicesController.TodoItems.TodoItemController",
+    "Method": "Delete",
+    "RelativePath": "api/TodoItem/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
         "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UI.Controllers.ServicesController.TodoItems.TodoItemController",
+    "Method": "GetAll",
+    "RelativePath": "api/TodoItem/GetAllAsync",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UI.Controllers.ServicesController.TodoItems.TodoItemController",
+    "Method": "Get",
+    "RelativePath": "api/TodoItem/GetAsync",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UI.Controllers.ServicesController.TodoItems.TodoItemController",
+    "Method": "Update",
+    "RelativePath": "api/TodoItem/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "input",
+        "Type": "Application.TodoItems.Dtos.TodoItemDto",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

@@ -1,4 +1,5 @@
-﻿using Domain.Test;
+﻿
+using Domain.Entities.TodoItem;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using System.IO;
@@ -10,7 +11,7 @@ public class AppDbContext : DbContext
     {
     }
 
-    public DbSet<Test> Tests { get; set; }
+    public DbSet<TodoItem> Tests { get; set; }
 
 
 
@@ -18,11 +19,11 @@ public class AppDbContext : DbContext
     {
         base.OnModelCreating(modelBuilder);
 
-        modelBuilder.Entity<Test>(entity =>
+        modelBuilder.Entity<TodoItem>(entity =>
         {
             entity.HasKey(e => e.Id);
-            entity.Property(e => e.Name).HasMaxLength(50);
-            entity.Property(e => e.CreationTime).HasColumnType("date");
+            entity.Property(e => e.DueDate).HasColumnType("date");
+            entity.Property(e => e.Created).HasColumnType("date");
         });
     }
 }

@@ -1,13 +1,8 @@
-﻿using Domain.Entities.Test;
-using EFCore.Test;
+﻿using Domain.Entities.TodoItem;
+using EFCore.TodoItem;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EFCore
 {
@@ -15,7 +10,7 @@ namespace EFCore
     {
         public static IServiceCollection AddEfCoreModule(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddScoped<ITestRepository, EFCoreTestRepository>();
+            services.AddScoped<ITodoItemRepository, EFCoreTodoItemRepository>();
 
             // Connection string okuma
             var connectionString = configuration.GetConnectionString("Default");

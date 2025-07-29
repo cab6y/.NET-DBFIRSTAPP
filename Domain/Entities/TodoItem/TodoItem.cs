@@ -1,38 +1,32 @@
 ﻿using Domain.common;
-using Domain.Enums;
 using Domain.Events;
 namespace Domain.Entities.TodoItem
 {
     public class TodoItem : BaseAuditableEntity, ISoftDelete
     {
-        public int ListId { get; set; }
 
         public string? Title { get; set; }
 
-        public string? Note { get; set; }
+        public string? Description { get; set; }
 
-        public PriorityLevel Priority { get; set; }
-
-        public DateTime? Reminder { get; set; }
-        public string? Tag { get; set; } //for task2
+        public DateTime DueDate { get; set; }
         public bool IsDeleted { get; set; } = false;
 
-        private bool _done;
-        public bool Done
+        private bool _isCompleted;
+        public bool IsCompleted
         {
-            get => _done;
+            get => _isCompleted;
             set
             {
-                if (value == true && _done == false)
+                if (value == true && _isCompleted == false)
                 {
                     AddDomainEvent(new TodoItemCompletedEvent(this));
                 }
 
-                _done = value;
+                _isCompleted = value;
             }
         }
 
-        public Domain.Entities.TodoList.TodoList List { get; set; } = null!;
     }
 }
 
