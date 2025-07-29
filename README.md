@@ -1,4 +1,4 @@
-
+PLEASE INSTALL .NET 7.0 ON YOUR VS 22
 ## Initial Setup
 
 ### 1. Running the Project
