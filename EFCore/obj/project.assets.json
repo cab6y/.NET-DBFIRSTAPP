@@ -3071,11 +3071,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\VisualProjects\\DBFIRSTAPP\\DBFirstApp\\EFCore\\EFCore.csproj",
+      "projectUniqueName": "C:\\VisualProjects\\DBFIRSTAPP\\.NET-DBFIRSTAPP\\EFCore\\EFCore.csproj",
       "projectName": "EFCore",
-      "projectPath": "C:\\VisualProjects\\DBFIRSTAPP\\DBFirstApp\\EFCore\\EFCore.csproj",
+      "projectPath": "C:\\VisualProjects\\DBFIRSTAPP\\.NET-DBFIRSTAPP\\EFCore\\EFCore.csproj",
       "packagesPath": "C:\\Users\\cihan.abay\\.nuget\\packages\\",
-      "outputPath": "C:\\VisualProjects\\DBFIRSTAPP\\DBFirstApp\\EFCore\\obj\\",
+      "outputPath": "C:\\VisualProjects\\DBFIRSTAPP\\.NET-DBFIRSTAPP\\EFCore\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -3096,8 +3096,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\VisualProjects\\DBFIRSTAPP\\DBFirstApp\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\VisualProjects\\DBFIRSTAPP\\DBFirstApp\\Domain\\Domain.csproj"
+            "C:\\VisualProjects\\DBFIRSTAPP\\.NET-DBFIRSTAPP\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\VisualProjects\\DBFIRSTAPP\\.NET-DBFIRSTAPP\\Domain\\Domain.csproj"
             }
           }
         }
