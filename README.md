@@ -1,28 +1,34 @@
-# DB Backup Yükleme ve Konfigürasyon
+# TODOAPP-ANGULAR-.NET
 
-Bu proje, `UI` katmanı altında bulunan **dbfirst.bak** dosyası ile birlikte gelmektedir. Bu dosya bir **SQL Server veritabanı yedeğidir** ve projeyi çalıştırabilmek için yüklenmesi gerekmektedir.
+## Initial Setup
 
-## 1. Veritabanı Yedeğinin MSSQL'e Yüklenmesi
+### 1. Running the Project
+Before running the project for the first time, you need to create the database tables.
 
-1. **SQL Server Management Studio (SSMS)** uygulamasını açın.
-2. **`Veritabanları (Databases)`** üzerine sağ tıklayın ve **`Veritabanı Geri Yükle (Restore Database)`** seçeneğini seçin.
-3. **Cihaz (Device)** seçeneğini işaretleyin ve **Gözat (Browse)** butonuna tıklayın.
-4. **UI/dbfirst.bak** dosyasının yolunu seçin ve onaylayın.
-5. Hedef veritabanı adı olarak `DBFirstApp` veya istediğiniz herhangi bir isim belirleyin.
-6. İşlemi tamamlamak için **Tamam (OK)** butonuna basın.
+1. **Set EFCore as Startup Project**  
+   - In Visual Studio, right-click on the **EFCore** project in the **Solution Explorer**.  
+   - Select **Set as Startup Project**.
 
-> **Not:** Geri yükleme işleminden sonra veritabanınız kullanılabilir hale gelecektir.
+2. **Apply Database Migration**  
+   - Open the **Package Manager Console** (PMC) window.  
+   - Run the following command:
+     ```powershell
+     Update-Database
+     ```
+   This command will use the existing migration files in the project to create the database.
 
----
+### 2. Database Information
+- The application runs on **LocalDB**.  
+- The database connection string is defined in the `appsettings.json` file.
 
-## 2. Connection String Düzenlemesi
+### 3. Temporal Table Structure
+This project uses the **TodoItems** table with **Temporal Table (System-Versioned)** support.
 
-Veritabanı yüklendikten sonra, proje `UI` katmanı altındaki **appsettings.json** dosyasında yer alan connection string'i güncellemeniz gerekmektedir.
+- **Main Table**: `TodoItems`  
+  Holds the current records used by the application.
+- **History Table**: (Automatically created by SQL Server)  
+  Stores historical data for all changes made to the `TodoItems` table.
 
-### Adımlar:
-1. **UI/appsettings.json** dosyasını açın.
-2. `ConnectionStrings` alanını bulun:
-   ```json
-   "ConnectionStrings": {
-     "Default": "Server=.;Database=DBFirstApp;Trusted_Connection=True;MultipleActiveResultSets=true"
-   }
+With Temporal Table, historical data is automatically maintained and can be queried as follows:
+```sql
+SELECT * FROM TodoItems FOR SYSTEM_TIME ALL;
