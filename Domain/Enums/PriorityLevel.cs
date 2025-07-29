@@ -4,11 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain
+namespace Domain.Enums
 {
-    public class Basemodel
+    public enum PriorityLevel
     {
-        public Guid Id { get; set; }
-        public DateTime CreationTime { get; set; }
+        None = 0,
+        Low = 1,
+        Medium = 2,
+        High = 3
     }
+
 }
