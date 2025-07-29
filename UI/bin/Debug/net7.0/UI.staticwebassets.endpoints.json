@@ -331,6 +331,88 @@
       ]
     },
     {
+      "Route": "js/todoitems.js",
+      "AssetFile": "js/todoitems.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3418"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BoQ0X3hdbuq0TCTmagkpSgjMj9W80lZlcoEPS/HOssA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 29 Jul 2025 18:17:30 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-BoQ0X3hdbuq0TCTmagkpSgjMj9W80lZlcoEPS/HOssA="
+        }
+      ]
+    },
+    {
+      "Route": "js/todoitems.qok9nprufb.js",
+      "AssetFile": "js/todoitems.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3418"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BoQ0X3hdbuq0TCTmagkpSgjMj9W80lZlcoEPS/HOssA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 29 Jul 2025 18:17:30 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "qok9nprufb"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-BoQ0X3hdbuq0TCTmagkpSgjMj9W80lZlcoEPS/HOssA="
+        },
+        {
+          "Name": "label",
+          "Value": "js/todoitems.js"
+        }
+      ]
+    },
+    {
       "Route": "lib/bootstrap/LICENSE",
       "AssetFile": "lib/bootstrap/LICENSE",
       "Selectors": [],

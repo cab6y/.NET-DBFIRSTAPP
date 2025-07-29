@@ -10,8 +10,7 @@
         "dependencies": {
           "Application": "1.0.0",
           "EFCore": "1.0.0",
-          "Swashbuckle.AspNetCore": "6.5.0",
-          "jQuery": "3.7.1"
+          "Swashbuckle.AspNetCore": "6.5.0"
         },
         "runtime": {
           "UI.dll": {}
@@ -66,7 +65,6 @@
           }
         }
       },
-      "jQuery/3.7.1": {},
       "MediatR/13.0.0": {
         "dependencies": {
           "MediatR.Contracts": "2.0.1",
@@ -724,13 +722,6 @@
       "sha512": "sha512-l1Xm2MWOF2Mzcwuarlw8kWQXLZk3UeB55aQXVyjj23aBfDwOZ3gu5GP2kJ6KlmZeZv2TCzw7x4L3V36iNr3gww==",
       "path": "azure.identity/1.10.3",
       "hashPath": "azure.identity.1.10.3.nupkg.sha512"
-    },
-    "jQuery/3.7.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-rF8hnQxmBMlIspf8VN72bALtmIpKx6hKRpUdTOkp/8JzfF8KgNqHut5lOy9kFGvFIStumCqJ+PBxpI9gxpRYfQ==",
-      "path": "jquery/3.7.1",
-      "hashPath": "jquery.3.7.1.nupkg.sha512"
     },
     "MediatR/13.0.0": {
       "type": "package",

@@ -1,13 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "ujwN+Hc9Hus=",
+  "dgSpecHash": "bGRqeqx1on8=",
   "success": true,
   "projectFilePath": "C:\\VisualProjects\\DBFIRSTAPP\\DBFirstApp\\UI\\UI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\cihan.abay\\.nuget\\packages\\automapper\\15.0.1\\automapper.15.0.1.nupkg.sha512",
     "C:\\Users\\cihan.abay\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\cihan.abay\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
-    "C:\\Users\\cihan.abay\\.nuget\\packages\\jquery\\3.7.1\\jquery.3.7.1.nupkg.sha512",
     "C:\\Users\\cihan.abay\\.nuget\\packages\\mediatr\\13.0.0\\mediatr.13.0.0.nupkg.sha512",
     "C:\\Users\\cihan.abay\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\cihan.abay\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\8.0.0\\microsoft.bcl.asyncinterfaces.8.0.0.nupkg.sha512",

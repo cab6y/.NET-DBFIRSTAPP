@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
+      "Id": "C:\\VisualProjects\\DBFIRSTAPP\\DBFirstApp\\UI\\wwwroot\\js\\todoitems.js",
+      "PackagePath": "staticwebassets\\js\\todoitems.js"
+    },
+    {
       "Id": "C:\\VisualProjects\\DBFIRSTAPP\\DBFirstApp\\UI\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
