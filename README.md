@@ -32,3 +32,4 @@ This project uses the **TodoItems** table with **Temporal Table (System-Versione
 With Temporal Table, historical data is automatically maintained and can be queried as follows:
 ```sql
 SELECT * FROM TodoItems FOR SYSTEM_TIME ALL;
+
