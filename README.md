@@ -1,4 +1,3 @@
-# TODOAPP-ANGULAR-.NET
 
 ## Initial Setup
 
