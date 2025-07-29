@@ -1,5 +1,6 @@
 ﻿using Application.TodoItems.Dtos;
 using Domain.Entities.TodoItem;
+using Serilog;
 
 namespace Application.TodoItems;
  public class TodoItemAppService : ITodoItemAppService
@@ -22,11 +23,11 @@ namespace Application.TodoItems;
                 DueDate = DateTime.UtcNow
             };
             return await _todoItemRepository.AddAsync(map);
-
         }
-        catch
+        catch (Exception ex)
         {
-            throw new ArgumentNullException(nameof(input));
+            Log.Error("Error adding TodoItem: {Message}", ex.Message);
+            throw;
         }
     }
 
@@ -35,38 +36,56 @@ namespace Application.TodoItems;
         try
         {
             return await _todoItemRepository.Delete(id);
-
         }
-        catch
+        catch (Exception ex)
         {
-            throw new ArgumentNullException(nameof(id));
+            Log.Error("Error deleting TodoItem with ID {Id}: {Message}", id, ex.Message);
+            throw;
         }
     }
 
     public async Task<TodoItemDto> GetAsync(int id)
     {
-        var get = await _todoItemRepository.GetAsync(id);
-        return new TodoItemDto
+        try
         {
-            Id = get.Id,
-            Title = get.Title,
-            Description = get.Description,
-            IsCompleted = get.IsCompleted,
-            DueDate = get.DueDate
-        };
+            var get = await _todoItemRepository.GetAsync(id);
+            return new TodoItemDto
+            {
+                Id = get.Id,
+                Title = get.Title,
+                Description = get.Description,
+                IsCompleted = get.IsCompleted,
+                DueDate = get.DueDate
+            };
+        }
+        catch (Exception ex)
+        {
+            Log.Error("Error retrieving TodoItem with ID {Id}: {Message}", id, ex.Message);
+            throw;
+        }
+       
     }
 
     public async Task<List<TodoItemDto>> GetAllAsync()
     {
-        var list = await _todoItemRepository.GetAllAsync();
-        return list.Select(item => new TodoItemDto
+        try
         {
-            Id = item.Id,
-            Title = item.Title,
-            Description = item.Description,
-            IsCompleted = item.IsCompleted,
-            DueDate = item.DueDate
-        }).ToList();
+            var list = await _todoItemRepository.GetAllAsync();
+            return list.Select(item => new TodoItemDto
+            {
+                Id = item.Id,
+                Title = item.Title,
+                Description = item.Description,
+                IsCompleted = item.IsCompleted,
+                DueDate = item.DueDate
+            }).ToList();
+        }
+        catch (Exception ex)
+        {
+            Log.Error("Error retrieving TodoItems: {Message}", ex.Message);
+            throw;
+        }
+       
     }
 
     public async Task<bool> UpdateAsync(TodoItemDto input)
@@ -85,7 +104,8 @@ namespace Application.TodoItems;
         }
         catch
         {
-            throw new ArgumentNullException(nameof(input));
+            Log.Error("Error updating TodoItem: {Message}", input);
+            throw;
         }
     }
 }

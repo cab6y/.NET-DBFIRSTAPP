@@ -54,9 +54,9 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
-            "AutoMapper": {
+            "Serilog": {
               "target": "Package",
-              "version": "[15.0.1, )"
+              "version": "[4.3.0, )"
             }
           },
           "imports": [
