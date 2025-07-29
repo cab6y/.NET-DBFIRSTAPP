@@ -1,19 +1,19 @@
 ﻿
 using Domain.Entities.TodoItem;
+using EFCore.Interceptors;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using System.IO;
 
 public class AppDbContext : DbContext
 {
-    public AppDbContext(DbContextOptions<AppDbContext> options)
+    private readonly SoftDeleteInterceptor? _softDeleteInterceptor;
+
+    public AppDbContext(DbContextOptions<AppDbContext> options, SoftDeleteInterceptor? softDeleteInterceptor)
         : base(options)
     {
+        _softDeleteInterceptor = softDeleteInterceptor;
     }
 
     public DbSet<TodoItem> TodoItems { get; set; }
-
-
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -24,6 +24,14 @@ public class AppDbContext : DbContext
             entity.HasKey(e => e.Id);
             entity.Property(e => e.DueDate).HasColumnType("date");
             entity.Property(e => e.Created).HasColumnType("date");
+
+            // IsDeleted = false olanları default query'de filtrele
+            entity.HasQueryFilter(x => !x.IsDeleted);
         });
+    }
+
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+        optionsBuilder.AddInterceptors(_softDeleteInterceptor);
     }
 }

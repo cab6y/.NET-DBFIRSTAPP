@@ -1,4 +1,5 @@
 ﻿using Domain.Entities.TodoItem;
+using EFCore.Interceptors;
 using EFCore.TodoItem;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -10,6 +11,8 @@ namespace EFCore
     {
         public static IServiceCollection AddEfCoreModule(this IServiceCollection services, IConfiguration configuration)
         {
+            services.AddScoped<SoftDeleteInterceptor>();
+
             services.AddScoped<ITodoItemRepository, EFCoreTodoItemRepository>();
 
             // Connection string okuma
