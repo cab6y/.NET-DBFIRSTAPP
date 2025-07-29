@@ -25,6 +25,14 @@ public class AppDbContext : DbContext
             entity.Property(e => e.DueDate).HasColumnType("date");
             entity.Property(e => e.Created).HasColumnType("date");
 
+            // Temporal Table ayarı
+            entity.ToTable("TodoItems", tb => tb.IsTemporal(ttb =>
+            {
+                ttb.HasPeriodStart("ValidFrom").HasColumnName("ValidFrom");
+                ttb.HasPeriodEnd("ValidTo").HasColumnName("ValidTo");
+                ttb.UseHistoryTable("TodoItemsHistory"); // History tablosu adı
+            }));
+
             // IsDeleted = false olanları default query'de filtrele
             entity.HasQueryFilter(x => !x.IsDeleted);
         });
