@@ -3,7 +3,7 @@ using Application.TodoItems.Dtos;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace UI.Controllers.ServicesController.TodoItems
+namespace UI.Controllers.TodoItems
 {
     [Route("api/[controller]")]
     [ApiController]
