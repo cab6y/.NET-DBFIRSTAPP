@@ -28,6 +28,7 @@ public class EFCoreTodoItemRepository : ITodoItemRepository
         item.Title = input.Title;
         item.Description = input.Description;
         item.IsCompleted = input.IsCompleted;
+        item.LastModified = DateTime.Now;
         _context.Entry(item).State = EntityState.Modified;
         return await _context.SaveChangesAsync() > 0;
     }
@@ -37,6 +38,7 @@ public class EFCoreTodoItemRepository : ITodoItemRepository
         {
             throw new ArgumentNullException(nameof(input));
         }
+        input.Created = DateTime.Now;
         _context.Set<Domain.Entities.TodoItem.TodoItem>().Add(input);
         return await _context.SaveChangesAsync() > 0;
     }
