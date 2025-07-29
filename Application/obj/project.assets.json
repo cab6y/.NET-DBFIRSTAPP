@@ -2,6 +2,26 @@
   "version": 3,
   "targets": {
     "net7.0": {
+      "AutoMapper/15.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Bcl.HashCode": "6.0.0",
+          "Microsoft.Extensions.Logging": "8.0.0",
+          "Microsoft.Extensions.Options": "8.0.0",
+          "Microsoft.IdentityModel.JsonWebTokens": "8.0.1",
+          "System.Reflection.Emit": "4.7.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/AutoMapper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/AutoMapper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Azure.Core/1.35.0": {
         "type": "package",
         "dependencies": {
@@ -90,6 +110,22 @@
           "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "Microsoft.Bcl.HashCode/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Microsoft.Bcl.HashCode.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.Bcl.HashCode.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
         }
       },
       "Microsoft.Data.SqlClient/5.1.5": {
@@ -860,6 +896,15 @@
           "lib/netcoreapp2.0/_._": {}
         }
       },
+      "System.Reflection.Emit/4.7.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/_._": {}
+        }
+      },
       "System.Runtime.Caching/6.0.0": {
         "type": "package",
         "dependencies": {
@@ -1142,6 +1187,26 @@
     }
   },
   "libraries": {
+    "AutoMapper/15.0.1": {
+      "sha512": "kNo7iIAi4p4XxoEbfif2WUQtc6RTx+UteiRYPqCOKj+4q4+YaWono06qTxoHBy+0N1HdganA//k5p/VmWw2AMA==",
+      "type": "package",
+      "path": "automapper/15.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "README.md",
+        "automapper.15.0.1.nupkg.sha512",
+        "automapper.nuspec",
+        "icon.png",
+        "lib/net8.0/AutoMapper.dll",
+        "lib/net8.0/AutoMapper.xml",
+        "lib/net9.0/AutoMapper.dll",
+        "lib/net9.0/AutoMapper.xml",
+        "lib/netstandard2.0/AutoMapper.dll",
+        "lib/netstandard2.0/AutoMapper.xml"
+      ]
+    },
     "Azure.Core/1.35.0": {
       "sha512": "hENcx03Jyuqv05F4RBEPbxz29UrM3Nbhnr6Wl6NQpoU9BCIbL3XLentrxDCTrH54NLS11Exxi/o8MYgT/cnKFA==",
       "type": "package",
@@ -1240,6 +1305,31 @@
         "microsoft.bcl.asyncinterfaces.8.0.0.nupkg.sha512",
         "microsoft.bcl.asyncinterfaces.nuspec",
         "useSharedDesignerContext.txt"
+      ]
+    },
+    "Microsoft.Bcl.HashCode/6.0.0": {
+      "sha512": "GI4jcoi6eC9ZhNOQylIBaWOQjyGaR8T6N3tC1u8p3EXfndLCVNNWa+Zp+ocjvvS3kNBN09Zma2HXL0ezO0dRfw==",
+      "type": "package",
+      "path": "microsoft.bcl.hashcode/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "buildTransitive/net461/Microsoft.Bcl.HashCode.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/Microsoft.Bcl.HashCode.targets",
+        "lib/net462/Microsoft.Bcl.HashCode.dll",
+        "lib/net462/Microsoft.Bcl.HashCode.xml",
+        "lib/net6.0/Microsoft.Bcl.HashCode.dll",
+        "lib/net6.0/Microsoft.Bcl.HashCode.xml",
+        "lib/netstandard2.0/Microsoft.Bcl.HashCode.dll",
+        "lib/netstandard2.0/Microsoft.Bcl.HashCode.xml",
+        "lib/netstandard2.1/Microsoft.Bcl.HashCode.dll",
+        "lib/netstandard2.1/Microsoft.Bcl.HashCode.xml",
+        "microsoft.bcl.hashcode.6.0.0.nupkg.sha512",
+        "microsoft.bcl.hashcode.nuspec"
       ]
     },
     "Microsoft.Data.SqlClient/5.1.5": {
@@ -2405,6 +2495,60 @@
         "version.txt"
       ]
     },
+    "System.Reflection.Emit/4.7.0": {
+      "sha512": "VR4kk8XLKebQ4MZuKuIni/7oh+QGFmZW3qORd1GvBq/8026OpW501SzT/oypwiQl4TvT8ErnReh/NzY9u+C6wQ==",
+      "type": "package",
+      "path": "system.reflection.emit/4.7.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/netcore50/System.Reflection.Emit.dll",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.1/System.Reflection.Emit.dll",
+        "lib/netstandard1.1/System.Reflection.Emit.xml",
+        "lib/netstandard1.3/System.Reflection.Emit.dll",
+        "lib/netstandard2.0/System.Reflection.Emit.dll",
+        "lib/netstandard2.0/System.Reflection.Emit.xml",
+        "lib/netstandard2.1/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.1/System.Reflection.Emit.dll",
+        "ref/netstandard1.1/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/de/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/es/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/fr/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/it/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/ja/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/ko/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/ru/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/zh-hans/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/zh-hant/System.Reflection.Emit.xml",
+        "ref/netstandard2.0/System.Reflection.Emit.dll",
+        "ref/netstandard2.0/System.Reflection.Emit.xml",
+        "ref/netstandard2.1/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/aot/lib/netcore50/System.Reflection.Emit.dll",
+        "runtimes/aot/lib/netcore50/System.Reflection.Emit.xml",
+        "system.reflection.emit.4.7.0.nupkg.sha512",
+        "system.reflection.emit.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "System.Runtime.Caching/6.0.0": {
       "sha512": "E0e03kUp5X2k+UAoVl6efmI7uU7JRBWi5EIdlQ7cr0NpBGjHG4fWII35PgsBY9T4fJQ8E4QPsL0rKksU9gcL5A==",
       "type": "package",
@@ -2910,6 +3054,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "AutoMapper >= 15.0.1",
       "EFCore >= 1.0.0",
       "Serilog >= 4.3.0"
     ]
@@ -2968,6 +3113,10 @@
       "net7.0": {
         "targetAlias": "net7.0",
         "dependencies": {
+          "AutoMapper": {
+            "target": "Package",
+            "version": "[15.0.1, )"
+          },
           "Serilog": {
             "target": "Package",
             "version": "[4.3.0, )"

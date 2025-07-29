@@ -10,8 +10,12 @@ namespace Application
             // Application implementasyonlarını buradan kaydet
             services.AddScoped<ITodoItemAppService, TodoItemAppService>();
 
-            // İleride yeni servis eklediğinde buraya ekleyebilirsin
+            // AutoMapper profillerini ekle
+            services.AddAutoMapper(cfg => { }, typeof(MappingProfile).Assembly);
+
             return services;
         }
+
+
     }
 }
