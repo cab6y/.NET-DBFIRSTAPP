@@ -11,3 +11,16 @@ C:\VisualProjects\DBFIRSTAPP\DBFirstApp\Domain\obj\Debug\net7.0\refint\Domain.dl
 C:\VisualProjects\DBFIRSTAPP\DBFirstApp\Domain\obj\Debug\net7.0\Domain.pdb
 C:\VisualProjects\DBFIRSTAPP\DBFirstApp\Domain\obj\Debug\net7.0\ref\Domain.dll
 C:\VisualProjects\DBFIRSTAPP\DBFirstApp\Domain\obj\Debug\net7.0\Domain.csproj.AssemblyReference.cache
+C:\VisualProjects\DBFIRSTAPP\.NET-DBFIRSTAPP\Domain\bin\Debug\net7.0\Domain.deps.json
+C:\VisualProjects\DBFIRSTAPP\.NET-DBFIRSTAPP\Domain\bin\Debug\net7.0\Domain.dll
+C:\VisualProjects\DBFIRSTAPP\.NET-DBFIRSTAPP\Domain\bin\Debug\net7.0\Domain.pdb
+C:\VisualProjects\DBFIRSTAPP\.NET-DBFIRSTAPP\Domain\obj\Debug\net7.0\Domain.csproj.AssemblyReference.cache
+C:\VisualProjects\DBFIRSTAPP\.NET-DBFIRSTAPP\Domain\obj\Debug\net7.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\VisualProjects\DBFIRSTAPP\.NET-DBFIRSTAPP\Domain\obj\Debug\net7.0\Domain.AssemblyInfoInputs.cache
+C:\VisualProjects\DBFIRSTAPP\.NET-DBFIRSTAPP\Domain\obj\Debug\net7.0\Domain.AssemblyInfo.cs
+C:\VisualProjects\DBFIRSTAPP\.NET-DBFIRSTAPP\Domain\obj\Debug\net7.0\Domain.csproj.CoreCompileInputs.cache
+C:\VisualProjects\DBFIRSTAPP\.NET-DBFIRSTAPP\Domain\obj\Debug\net7.0\Domain.sourcelink.json
+C:\VisualProjects\DBFIRSTAPP\.NET-DBFIRSTAPP\Domain\obj\Debug\net7.0\Domain.dll
+C:\VisualProjects\DBFIRSTAPP\.NET-DBFIRSTAPP\Domain\obj\Debug\net7.0\refint\Domain.dll
+C:\VisualProjects\DBFIRSTAPP\.NET-DBFIRSTAPP\Domain\obj\Debug\net7.0\Domain.pdb
+C:\VisualProjects\DBFIRSTAPP\.NET-DBFIRSTAPP\Domain\obj\Debug\net7.0\ref\Domain.dll
