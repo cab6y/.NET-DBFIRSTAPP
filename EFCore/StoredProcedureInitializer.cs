@@ -9,7 +9,7 @@ namespace EFCore.DBContext
             const string createProcIfNotExists = @"
             IF NOT EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'sp_GetTodoItems')
             BEGIN
-                EXEC('CREATE PROCEDURE sp_GetTodoItems AS BEGIN SELECT * FROM dbo.TodoItems END')
+                EXEC('CREATE PROCEDURE sp_GetTodoItems AS BEGIN SELECT * FROM dbo.TodoItems WHERE IsDeleted=0 END')
             END";
 
             await context.Database.ExecuteSqlRawAsync(createProcIfNotExists);

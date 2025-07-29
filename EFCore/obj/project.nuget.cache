@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+/N54Qvzdfo=",
+  "dgSpecHash": "zRdRI5xEkLI=",
   "success": true,
-  "projectFilePath": "C:\\VisualProjects\\DBFIRSTAPP\\.NET-DBFIRSTAPP\\EFCore\\EFCore.csproj",
+  "projectFilePath": "C:\\VisualProjects\\DBFIRSTAPP\\PERFORMANCE\\.NET-DBFIRSTAPP\\EFCore\\EFCore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\cihan.abay\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\cihan.abay\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

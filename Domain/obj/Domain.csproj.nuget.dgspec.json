@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\VisualProjects\\DBFIRSTAPP\\.NET-DBFIRSTAPP\\Domain\\Domain.csproj": {}
+    "C:\\VisualProjects\\DBFIRSTAPP\\PERFORMANCE\\.NET-DBFIRSTAPP\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "C:\\VisualProjects\\DBFIRSTAPP\\.NET-DBFIRSTAPP\\Domain\\Domain.csproj": {
+    "C:\\VisualProjects\\DBFIRSTAPP\\PERFORMANCE\\.NET-DBFIRSTAPP\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\VisualProjects\\DBFIRSTAPP\\.NET-DBFIRSTAPP\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\VisualProjects\\DBFIRSTAPP\\PERFORMANCE\\.NET-DBFIRSTAPP\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\VisualProjects\\DBFIRSTAPP\\.NET-DBFIRSTAPP\\Domain\\Domain.csproj",
+        "projectPath": "C:\\VisualProjects\\DBFIRSTAPP\\PERFORMANCE\\.NET-DBFIRSTAPP\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\cihan.abay\\.nuget\\packages\\",
-        "outputPath": "C:\\VisualProjects\\DBFIRSTAPP\\.NET-DBFIRSTAPP\\Domain\\obj\\",
+        "outputPath": "C:\\VisualProjects\\DBFIRSTAPP\\PERFORMANCE\\.NET-DBFIRSTAPP\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

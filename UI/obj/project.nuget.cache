@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wSO6Z2jDFDc=",
+  "dgSpecHash": "+iYdzEjCiHw=",
   "success": true,
-  "projectFilePath": "C:\\VisualProjects\\DBFIRSTAPP\\.NET-DBFIRSTAPP\\UI\\UI.csproj",
+  "projectFilePath": "C:\\VisualProjects\\DBFIRSTAPP\\PERFORMANCE\\.NET-DBFIRSTAPP\\UI\\UI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\cihan.abay\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\cihan.abay\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
