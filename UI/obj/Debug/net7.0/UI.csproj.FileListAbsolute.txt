@@ -191,3 +191,4 @@ C:\VisualProjects\DBFIRSTAPP\.NET-DBFIRSTAPP\UI\obj\Debug\net7.0\UI.pdb
 C:\VisualProjects\DBFIRSTAPP\.NET-DBFIRSTAPP\UI\obj\Debug\net7.0\UI.genruntimeconfig.cache
 C:\VisualProjects\DBFIRSTAPP\.NET-DBFIRSTAPP\UI\obj\Debug\net7.0\ref\UI.dll
 C:\VisualProjects\DBFIRSTAPP\.NET-DBFIRSTAPP\UI\bin\Debug\net7.0\Serilog.dll
+C:\VisualProjects\DBFIRSTAPP\.NET-DBFIRSTAPP\UI\bin\Debug\net7.0\libman.json

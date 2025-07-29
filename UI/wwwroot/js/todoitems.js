@@ -1,6 +1,6 @@
-﻿const apiUrl = "/api/todoitems";
+﻿
+const apiUrl = "/api/todoitems";
 let modal;
-
 $(document).ready(function () {
     const modalElement = document.getElementById('todoModal');
     if (modalElement) {
