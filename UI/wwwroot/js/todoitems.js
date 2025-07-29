@@ -40,7 +40,7 @@ function loadTodos() {
                 </td>
                 <td>
                     <button class="btn btn-sm btn-warning" onclick="editTodo(${todo.id})">Edit</button>
-                    <button class="btn btn-sm btn-danger" onclick="deleteTodo(${todo.id})">Delete</button>
+                    <button class="btn btn-sm btn-danger" onclick="confirmDelete(${todo.id})">Delete</button>
                 </td>
             </tr>
         `).join("");
@@ -64,7 +64,11 @@ function addTodo() {
         data: JSON.stringify(todo),
         success: function () {
             if (modal) modal.hide();
+            Swal.fire("Success!", "Todo has been added successfully.", "success");
             loadTodos();
+        },
+        error: function () {
+            Swal.fire("Error!", "An error occurred while adding the todo.", "error");
         }
     });
 }
@@ -99,7 +103,26 @@ function updateTodo(id) {
         data: JSON.stringify(todo),
         success: function () {
             if (modal) modal.hide();
+            Swal.fire("Success!", "Todo has been updated successfully.", "success");
             loadTodos();
+        },
+        error: function () {
+            Swal.fire("Error!", "An error occurred while updating the todo.", "error");
+        }
+    });
+}
+
+function confirmDelete(id) {
+    Swal.fire({
+        title: "Are you sure?",
+        text: "Do you really want to delete this todo?",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonText: "Yes, delete it!",
+        cancelButtonText: "No, cancel"
+    }).then((result) => {
+        if (result.isConfirmed) {
+            deleteTodo(id);
         }
     });
 }
@@ -109,7 +132,11 @@ function deleteTodo(id) {
         url: apiUrl + "/Delete?id=" + id,
         type: "DELETE",
         success: function () {
+            Swal.fire("Deleted!", "Todo has been deleted successfully.", "success");
             loadTodos();
+        },
+        error: function () {
+            Swal.fire("Error!", "An error occurred while deleting the todo.", "error");
         }
     });
 }
