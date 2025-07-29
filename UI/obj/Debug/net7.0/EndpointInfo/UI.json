@@ -5,7 +5,7 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/TodoItem/GetAllAsync": {
+    "/api/todoitems/GetList": {
       "get": {
         "tags": [
           "TodoItem"
@@ -17,7 +17,7 @@
         }
       }
     },
-    "/api/TodoItem/GetAsync": {
+    "/api/todoitems/Get": {
       "get": {
         "tags": [
           "TodoItem"
@@ -39,7 +39,7 @@
         }
       }
     },
-    "/api/TodoItem/Add": {
+    "/api/todoitems/Add": {
       "post": {
         "tags": [
           "TodoItem"
@@ -70,7 +70,7 @@
         }
       }
     },
-    "/api/TodoItem/Update": {
+    "/api/todoitems/Update": {
       "put": {
         "tags": [
           "TodoItem"
@@ -111,7 +111,7 @@
         }
       }
     },
-    "/api/TodoItem/Delete": {
+    "/api/todoitems/Delete": {
       "delete": {
         "tags": [
           "TodoItem"

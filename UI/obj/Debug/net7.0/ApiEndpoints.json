@@ -1,8 +1,8 @@
 [
   {
-    "ContainingType": "UI.Controllers.ServicesController.TodoItems.TodoItemController",
+    "ContainingType": "UI.Controllers.TodoItems.TodoItemController",
     "Method": "Add",
-    "RelativePath": "api/TodoItem/Add",
+    "RelativePath": "api/todoitems/Add",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -16,9 +16,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "UI.Controllers.ServicesController.TodoItems.TodoItemController",
+    "ContainingType": "UI.Controllers.TodoItems.TodoItemController",
     "Method": "Delete",
-    "RelativePath": "api/TodoItem/Delete",
+    "RelativePath": "api/todoitems/Delete",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -32,19 +32,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "UI.Controllers.ServicesController.TodoItems.TodoItemController",
-    "Method": "GetAll",
-    "RelativePath": "api/TodoItem/GetAllAsync",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "UI.Controllers.ServicesController.TodoItems.TodoItemController",
+    "ContainingType": "UI.Controllers.TodoItems.TodoItemController",
     "Method": "Get",
-    "RelativePath": "api/TodoItem/GetAsync",
+    "RelativePath": "api/todoitems/Get",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -58,9 +48,19 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "UI.Controllers.ServicesController.TodoItems.TodoItemController",
+    "ContainingType": "UI.Controllers.TodoItems.TodoItemController",
+    "Method": "GetAll",
+    "RelativePath": "api/todoitems/GetList",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UI.Controllers.TodoItems.TodoItemController",
     "Method": "Update",
-    "RelativePath": "api/TodoItem/Update",
+    "RelativePath": "api/todoitems/Update",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,

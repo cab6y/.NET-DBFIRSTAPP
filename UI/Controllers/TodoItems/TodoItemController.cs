@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace UI.Controllers.TodoItems
 {
-    [Route("api/[controller]")]
+    [Route("api/todoitems")]
     [ApiController]
     public class TodoItemController : ControllerBase
     {
@@ -14,13 +14,13 @@ namespace UI.Controllers.TodoItems
         {
             _todoItemAppService = todoItemAppService;
         }
-        [HttpGet("GetAllAsync")]
+        [HttpGet("GetList")]
         public async Task<IActionResult> GetAll()
         {
             var result = await _todoItemAppService.GetAllAsync();
             return Ok(result);
         }
-        [HttpGet("GetAsync")]
+        [HttpGet("Get")]
         public async Task<IActionResult> Get(int id)
         {
             var result = await _todoItemAppService.GetAsync(id);
@@ -37,13 +37,19 @@ namespace UI.Controllers.TodoItems
             {
                 return BadRequest("Input cannot be null");
             }
+
             var result = await _todoItemAppService.AddAsync(input);
+
             if (result)
             {
-                return Ok(true);
+                // 201 Created döner, body içine true konur.
+                return CreatedAtAction(nameof(Add), true);
+                // veya: return Created("", true);  // Lokasyon vermek istemiyorsan
             }
+
             return BadRequest("Failed to create Todo Item");
         }
+
         [HttpPut("Update")]
         public async Task<IActionResult> Update(int id, [FromBody] TodoItemDto input)
         {
